@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+   Borrar Reloj
+{% endblock %}
+
+{% block content %}
+<h1>Borrar Reloj</h1>
+
+<p>Seguro que quieres borrar el reloj: {{reloj}} ?</p>
+
+<form action="" method="POST">{% csrf_token %}
+    <a href='../'>Cancelar</a>
+    <input type="submit" value="Si, borrar">
+</form>
+{% endblock %}

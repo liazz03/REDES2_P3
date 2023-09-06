@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+   Relojes
+{% endblock %}
+
+{% block content %}
+<h1>Relojes registrados:</h1>
+
+{% if reloj_list %}
+    <table class="table table-striped table-hover">
+        {% for reloj in reloj_list %}
+        <li>
+            <p><a href="{{reloj.get_absolute_url }}">{{reloj}}</a></p>
+            <p><a class="btn btn-sm btn-danger" href="{% url 'remove_relojes' reloj.pk %}">Borrar</a></p>
+            <p><a class="btn btn-sm btn-secondary" href="{% url 'reloj_update' reloj.pk %}">Editar</a></p>
+        </li>
+        {% endfor %}
+    </table>
+</ul>
+{% else %}
+    <p>No hay relojes</p>
+{% endif %}
+
+<a class="btn btn-lg btn-secondary" href="{% url 'home' %}">Back to Home</a>
+
+{% endblock content %}

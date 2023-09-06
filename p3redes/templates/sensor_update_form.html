@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+   Editar Sensor
+{% endblock %}
+
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock content %}

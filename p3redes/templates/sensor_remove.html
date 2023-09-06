@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+   Borrar Sensor
+{% endblock %}
+
+{% block content %}
+<h1>Borrar Sensor</h1>
+
+<p>Seguro que quieres borrar el sensor: {{sensor}} ?</p>
+
+<form action="" method="POST">{% csrf_token %}
+    <a href='../'>Cancelar</a>
+    <input type="submit" value="Si, borrar">
+</form>
+{% endblock %}

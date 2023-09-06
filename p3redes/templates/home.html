@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+   Home
+{% endblock %}
+
+{% block content %}
+<div class="text-center cover-container d-flex p-3 mx-auto flex-column">
+    <main>
+
+        <a class="btn btn-lg btn-primary" href="{% url 'add_reloj' %}">Añade un reloj</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'add_sensor' %}">Añade un sensor</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'add_interruptor' %}">Añade un interruptor</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'add_regla' %}">Añade una regla</a>
+
+        <br>
+        <br>
+        <a class="btn btn-lg btn-primary" href="{% url 'list_relojes' %}">Ver Relojes</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'list_sensores' %}">Ver Sensores</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'list_interruptores' %}">Ver Interruptores</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'list_reglas' %}">Ver Reglas</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'list_eventos' %}">Ver Eventos</a>
+    </main>
+    
+</div>
+{% endblock content %}

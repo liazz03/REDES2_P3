@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Añade una regla</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Añadir</button>
+  </form>
+  <br>
+  <p>FORMATO: [Dispositivo1] [comparación] [estadoX] --> [Dispositivo2] [EstadoY]</p>
+  <p>[comparación] puede tomar los siguientes valores dependiendo del dispositivo:
+       <li>Interruptores: esta/está</li>
+       <li>Sensores: igual/mayor/menor </li>
+       <li>Relojes: marca</li>
+  </p>
+
+  <p>Algunos ejemplos de reglas:<br>
+    Sensor1 mayor 10 --> Interruptor1 ON
+    <br>
+    Reloj1 marca 08:00:20 --> Interruptor1 OFF
+  </p>
+  <p>¡No añadas reglas sobre dispositivos no registrados! </p>
+{% endblock %}

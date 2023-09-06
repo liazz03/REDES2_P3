@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+   Detalle del Interruptor
+{% endblock %}
+
+{% block content %}
+<h1>
+    ID: {{interruptor.publicId}}
+    <br>
+    Estado: {{interruptor.state}}
+</h1>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+   Sensores
+{% endblock %}
+
+{% block content %}
+<h1>Sensores registrados:</h1>
+
+{% if sensor_list %}
+    <table class="table table-striped table-hover">
+        {% for sensor in sensor_list %}
+        <li>
+            <p><a href="{{sensor.get_absolute_url }}">{{sensor}}</a></p>
+            <p><a class="btn btn-sm btn-danger" href="{% url 'remove_sensores' sensor.pk %}">Borrar</a></p>
+            <p><a class="btn btn-sm btn-secondary" href="{% url 'sensor_update' sensor.pk %}">Editar</a></p>
+        </li>
+        {% endfor %}
+    </table>
+</ul>
+{% else %}
+    <p>No hay sensores</p>
+{% endif %}
+
+<a class="btn btn-lg btn-secondary" href="{% url 'home' %}">Back to Home</a>
+
+{% endblock content %}
