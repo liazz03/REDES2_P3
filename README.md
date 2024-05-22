@@ -1,4 +1,5 @@
-# P3
+# Tercera práctica de Redes de Comunicaciones II
+
 Instalación de paquetes:
 
 Primero, es importante instalar los paquetes necesarios. Para esto, se adjunta un script: install_environment.sh que instala django y la librería paho, en caso de no tenerlos en el entorno de Python.
