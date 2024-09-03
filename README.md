@@ -10,6 +10,7 @@ Se brinda un fichero Makefile que simplifica los comandos a realizar. Para acced
 
 ```bash
 make runserver
+```
 
 Django proporcionará un enlace al cual se tiene que acceder.
 
